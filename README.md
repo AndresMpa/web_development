@@ -1,2 +1,2 @@
-# web_development
+# Web Development
 In this repository I just wanna throw I that I know about web when I get some time
