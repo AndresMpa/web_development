@@ -57,6 +57,7 @@ body {
 
 
 .container .footer{
+    color: white;
     background: #000;
     grid-column: span 3;
 }
