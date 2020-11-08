@@ -34,7 +34,6 @@ body {
     grid-column: 1 / 4;
     border-radius: 0px;
     color: white;
-    margin-top: 0%;
 }
 
 .container .menu{
@@ -60,4 +59,65 @@ body {
     color: white;
     background: #000;
     grid-column: span 3;
+}
+
+@media screen and (max-width: 768px){
+    .container {
+        gap: 10px;
+    }
+
+    .container .header{
+        background: darkolivegreen;
+        grid-column: span;
+        color: white;
+        margin: 0;
+        gap: 0px;
+    }
+
+    .container .menu{
+        grid-row: 2;
+        grid-column: span 3;
+        background: yellow;
+    
+    }
+    
+    .container .content{
+        grid-column: span 3;
+        background: lightblue;
+    }
+
+    .container .toolbar{
+        display: none;
+    }
+}
+
+
+@media screen and (max-width: 360px){
+    .container {
+        gap: 0px;
+        font-size: large;
+    }
+
+    .container .header{
+        background: darkred;
+        grid-column: span;
+        color: white;
+        margin: 0;
+    }
+
+    .container .menu{
+        grid-row: 2;
+        grid-column: span 3;
+        background: darkgray;
+    
+    }
+    
+    .container .content{
+        grid-column: span 3;
+        background: lightsteelblue;
+    }
+
+    .container .toolbar{
+        display: none;
+    }
 }
