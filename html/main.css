@@ -65,3 +65,28 @@ body {
     grid-area: footer;
     background: #000;
 }
+
+@media screen and (max-width: 768px){
+    .container {
+        grid-template-areas:
+            "header header header"
+            "menu menu menu"
+            "toolbar toolbar toolbar"
+            "content content content"
+            "footer footer footer";
+    }
+}
+
+@media screen and (max-width: 600px){
+    .container {
+        grid-template-areas:
+            "header header header"
+            "menu menu menu"
+            "content content content"
+            "footer footer footer";
+    }
+
+    .container .toolbar {
+        display: none;
+    }
+}
