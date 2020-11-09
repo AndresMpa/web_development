@@ -18,11 +18,9 @@ body {
     
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(4. auto);
-    margin: 2em auto;
     max-width: 100%;
     display: grid;
     width: 100%;
-    gap: 20px;
 }
 
 .container .content,
@@ -31,31 +29,29 @@ body {
 .container .header,
 .container .menu {
     background: white;
-    border-radius: 4px;
     padding: 5%;
 }
 
 .container .header{
-    background: darkblue;
-    border-radius: 0px;
+    background: #0929C7;
     grid-area: header;
     color: white;
 }
 
 .container .menu{
-    background: green;
+    background: #C73A0C;
     grid-area: menu;
 
 }
 
 .container .content{
-    background: red;
+    background: #FAA269;
     grid-area: content;
 }
 
 
 .container .toolbar{
-    background: orange;
+    background: #28B9FA;
     grid-area: toolbar;
 }
 
@@ -63,7 +59,7 @@ body {
 .container .footer{
     color: white;
     grid-area: footer;
-    background: #000;
+    background: #293B94;
 }
 
 @media screen and (max-width: 768px){
