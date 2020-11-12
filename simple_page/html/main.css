@@ -1,0 +1,126 @@
+* {
+    margin: 0%;
+    padding: 0%;
+}
+
+body {
+    color: black;
+    background-color: whitesmoke;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+a {
+    color: black;
+    text-decoration: none;
+}
+
+img {
+    width: 100px;
+    height: 100px;
+}
+
+.container {
+    grid-template-areas:
+        "header header header"
+        "menu menu menu"
+        "content content toolbar"
+        "content content toolbar"
+        "content content toolbar"
+        "footer footer footer";
+    
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(6, auto);
+    max-width: 100%;
+    display: grid;
+    width: 100%;
+}
+
+.container .content,
+.container .toolbar,
+.container .footer,
+.container .header,
+.container .menu {
+    background: white;
+    padding: 5%;
+}
+
+.container .header{
+    background: #0929C7;
+    grid-area: header;
+    color: white;
+    padding: 3em;
+}
+
+.container .menu{
+    background: #C73A0C;
+    grid-area: menu;
+}
+
+.menu--items{
+    list-style: none;
+}
+
+.container .content{
+    background: #FAA269;
+    grid-area: content;
+}
+
+.content--article{
+    padding-bottom: 2em;
+}
+
+.container .toolbar{
+    background: #28B9FA;
+    grid-area: toolbar;
+}
+
+.container .footer{
+    color: white;
+    grid-area: footer;
+    text-align: center;
+    background: #293B94;
+}
+
+.footer__list{
+    margin: auto;
+    max-width: 60%;
+    display: inline;
+}
+
+.footer__list--item{
+    display: inline;
+    padding-left: 3em;
+}
+
+.footer__address{
+    margin: auto;
+    max-width: 45%;
+}
+
+@media screen and (max-width: 768px){
+    .container {
+        grid-template-areas:
+            "header header header"
+            "menu menu menu"
+            "toolbar toolbar toolbar"
+            "content content content"
+            "content content content"
+            "footer footer footer";
+    }
+}
+
+@media screen and (max-width: 600px){
+    .container {
+        grid-template-areas:
+            "header header header"
+            "menu menu menu"
+            "content content content"
+            "content content content"
+            "content content content"
+            "footer footer footer";
+    }
+
+    .container .toolbar {
+        display: none;
+    }
+}
