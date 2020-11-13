@@ -88,5 +88,25 @@ ftr -> Footer
 }
 
 .container__mct {
+    padding: 3%;
     background: #000;
+    grid-area: mct;
+}
+
+.container__st1 {
+    padding: 50%;
+    grid-area: st1;
+    background-color: black;
+}
+
+.container__st2 {
+    padding: 50%;
+    grid-area: st2;
+    background-color: black;
+}
+
+.container__st3 {
+    padding: 50%;
+    grid-area: st3;
+    background-color: black;
 }
