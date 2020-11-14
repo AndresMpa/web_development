@@ -1,4 +1,5 @@
 * {
+    color: white;
     padding: 0%;
     margin: 0%;
 }
@@ -18,7 +19,7 @@ a:hover {
 }
 
 li:hover {
-    background-color: darkred;
+    background-color: rgba(139, 0, 0, 0.795);
 }
 
 
@@ -59,7 +60,7 @@ ftr -> Footer
 
 .container__hdr {
     grid-area: hdr;
-    background-color: lightcoral;
+    background-color: darkred;
 }
 
 .container__hdr--img {
@@ -89,24 +90,34 @@ ftr -> Footer
 
 .container__mct {
     padding: 3%;
-    background: #000;
     grid-area: mct;
+    background: #000;
 }
 
 .container__st1 {
-    padding: 50%;
+    padding: 30%;
     grid-area: st1;
-    background-color: black;
+    background-color: rgb(20, 20, 20);
 }
 
 .container__st2 {
-    padding: 50%;
+    padding: 30%;
     grid-area: st2;
-    background-color: black;
+    background-color: rgb(20, 20, 20);
 }
 
 .container__st3 {
-    padding: 50%;
+    padding: 30%;
     grid-area: st3;
-    background-color: black;
+    background-color: rgb(20, 20, 20);
+}
+
+.container__st--img {
+    width: 60%;
+}
+
+.container__ftr {
+    grid-area: ftr;
+    background: #000;
+    
 }
