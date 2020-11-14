@@ -1,20 +1,22 @@
+%card {
+    padding: 10%;
+    background-color: rgb(20, 20, 20);    
+}
+
 .container {
-    .st1 {      
-        padding: 10%;
+    .st1 {
+        @extend %card;
         grid-area: st1;
-        background-color: rgb(20, 20, 20);      
     }
 
     .st2 {
-        padding: 10%;
+        @extend %card;
         grid-area: st2;
-        background-color: rgb(20, 20, 20); 
     }
 
     .st3 {
-        padding: 10%;
+        @extend %card;
         grid-area: st3;
-        background-color: rgb(20, 20, 20);
     }
 
     .st--img {
