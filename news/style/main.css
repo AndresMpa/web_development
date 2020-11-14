@@ -9,12 +9,7 @@ body {
 }
 
 a {
-  color: white;
   text-decoration: none;
-}
-
-.nav--li:hover {
-  background-color: rgba(139, 0, 0, 0.795);
 }
 
 /*
@@ -39,11 +34,35 @@ ftr -> Footer
   width: 100%;
 }
 
+@media screen and (max-width: 600px) {
+  .container {
+    grid-template-areas: "hdr hdr hdr hdr hdr hdr" "hdr hdr hdr hdr hdr hdr" "hdr hdr hdr hdr hdr hdr" "hdr hdr hdr hdr hdr hdr" "nav nav nav nav nav nav" "mct mct mct mct mct mct" "mct mct mct mct mct mct" "mct mct mct mct mct mct" "st1 st1 st1 st1 st1 st1" "st2 st2 st2 st2 st2 st2" "st3 st3 st3 st3 st3 st3" "ct1 ct1 ct1 ct1 ct1 ct1" "ct2 ct2 ct2 ct2 ct2 ct2" "ct3 ct3 ct3 ct3 ct3 ct3" "ftr ftr ftr ftr ftr ftr" "ftr ftr ftr ftr ftr ftr" "ftr ftr ftr ftr ftr ftr";
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: repeat(17, auto);
+    max-width: 100%;
+    display: grid;
+    width: 100%;
+  }
+  .container .nav--li {
+    padding: 1.8em;
+  }
+  .container .ftr {
+    color: white;
+    grid-area: ftr;
+    padding-top: 10%;
+    background: #000;
+    text-align: center;
+  }
+  .container .ftr__lst--itm--img {
+    width: 4em;
+    height: 4em;
+    width: auto;
+  }
+}
 .container .hdr {
   grid-area: hdr;
   background-color: darkred;
 }
-
 .container .hdr--img {
   width: 50%;
   height: 90%;
@@ -59,11 +78,13 @@ ftr -> Footer
   grid-area: nav;
   background-color: coral;
 }
-
 .container .nav--li {
   padding: 2em;
   border-radius: 5px;
   display: inline-flex;
+}
+.container .nav--li:hover {
+  background-color: rgba(139, 0, 0, 0.795);
 }
 
 .container .mct {
@@ -72,50 +93,45 @@ ftr -> Footer
   background: #000;
 }
 
-.container .st1,
-.container .st2,
-.container .st3 {
+.container .st1 {
   padding: 10%;
+  grid-area: st1;
   background-color: #141414;
 }
-
-.container .st1 {
-  grid-area: st1;
-}
-
 .container .st2 {
+  padding: 10%;
   grid-area: st2;
+  background-color: #141414;
 }
-
 .container .st3 {
+  padding: 10%;
   grid-area: st3;
+  background-color: #141414;
 }
-
 .container .st--img {
-  width: 100%;
   height: 20%;
+  width: 100%;
   align-self: center;
   display: inline-block;
 }
 
-.container .ct1,
-.container .ct2,
-.container .ct3 {
+.container .ct1 {
   background: darkgray;
+  grid-area: ct1;
   padding: 3em;
   margin: 2em;
 }
-
-.container .ct1 {
-  grid-area: ct1;
-}
-
 .container .ct2 {
+  background: darkgray;
   grid-area: ct2;
+  padding: 3em;
+  margin: 2em;
 }
-
 .container .ct3 {
+  background: darkgray;
   grid-area: ct3;
+  padding: 3em;
+  margin: 2em;
 }
 
 .container .ftr {
@@ -125,56 +141,23 @@ ftr -> Footer
   background: #000;
   text-align: center;
 }
-
 .container .ftr__lst {
   margin: auto;
   max-width: 60%;
   display: inline;
 }
-
 .container .ftr__lst--itm {
   display: inline;
   padding-left: 4em;
 }
-
 .container .ftr__lst--itm--img {
   width: 5em;
   height: 5em;
   width: auto;
 }
-
 .container .ftr__drs {
   margin: auto;
   max-width: 45%;
-}
-
-@media screen and (max-width: 600px) {
-  .container {
-    grid-template-areas: "hdr hdr hdr hdr hdr hdr" "hdr hdr hdr hdr hdr hdr" "hdr hdr hdr hdr hdr hdr" "hdr hdr hdr hdr hdr hdr" "nav nav nav nav nav nav" "mct mct mct mct mct mct" "mct mct mct mct mct mct" "mct mct mct mct mct mct" "st1 st1 st1 st1 st1 st1" "st2 st2 st2 st2 st2 st2" "st3 st3 st3 st3 st3 st3" "ct1 ct1 ct1 ct1 ct1 ct1" "ct2 ct2 ct2 ct2 ct2 ct2" "ct3 ct3 ct3 ct3 ct3 ct3" "ftr ftr ftr ftr ftr ftr" "ftr ftr ftr ftr ftr ftr" "ftr ftr ftr ftr ftr ftr";
-    grid-template-columns: repeat(6, 1fr);
-    grid-template-rows: repeat(17, auto);
-    max-width: 100%;
-    display: grid;
-    width: 100%;
-  }
-
-  .container .nav--li {
-    padding: 1.8em;
-  }
-
-  .container .ftr {
-    color: white;
-    grid-area: ftr;
-    padding-top: 10%;
-    background: #000;
-    text-align: center;
-  }
-
-  .container .ftr__lst--itm--img {
-    width: 4em;
-    height: 4em;
-    width: auto;
-  }
 }
 
 /*# sourceMappingURL=main.css.map */

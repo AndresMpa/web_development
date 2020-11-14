@@ -1,0 +1,31 @@
+.container {
+    .ftr {
+        padding: 10%;
+        color: white;
+        grid-area: ftr;
+        background: #000;
+        text-align: center;
+    }
+
+    .ftr__lst {
+        margin: auto;
+        max-width: 60%;
+        display: inline;
+    }
+    
+    .ftr__lst--itm {
+        display: inline;
+        padding-left: 4em;
+    }
+    
+    .ftr__lst--itm--img {
+        width: 5em;
+        height: 5em;
+        width: auto;
+    }
+    
+    .ftr__drs {
+        margin: auto;
+        max-width: 45%;
+    }
+}

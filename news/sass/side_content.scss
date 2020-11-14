@@ -1,0 +1,26 @@
+.container {
+    .st1 {      
+        padding: 10%;
+        grid-area: st1;
+        background-color: rgb(20, 20, 20);      
+    }
+
+    .st2 {
+        padding: 10%;
+        grid-area: st2;
+        background-color: rgb(20, 20, 20); 
+    }
+
+    .st3 {
+        padding: 10%;
+        grid-area: st3;
+        background-color: rgb(20, 20, 20);
+    }
+
+    .st--img {
+        height: 20%;
+        width: 100%;
+        align-self: center;
+        display: inline-block;
+    }
+}

@@ -1,0 +1,15 @@
+.container {
+    .nav {
+        grid-area: nav;
+        background-color: coral;
+    }
+    .nav--li {
+        padding: 2em;
+        border-radius: 5px;
+        display: inline-flex;
+
+        &:hover {
+            background-color: rgba(139, 0, 0, 0.795);
+        }        
+    }
+}

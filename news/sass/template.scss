@@ -1,0 +1,85 @@
+
+/*
+nav -> Navigator nav bar
+hrd -> Main Header and img
+mct -> Main content
+st1 -> Side content #1
+st2 -> Side content #2
+st3 -> Side content #3
+ct1 -> Content #1
+ct2 -> Content #2
+ct3 -> Content #3
+pgs -> Pages
+ftr -> Footer
+*/
+
+.container {
+    grid-template-areas:
+        "hdr hdr hdr hdr hdr hdr"
+        "hdr hdr hdr hdr hdr hdr"
+        "hdr hdr hdr hdr hdr hdr"
+        "hdr hdr hdr hdr hdr hdr"
+        "nav nav nav nav nav nav"
+        "mct mct mct st1 st1 st1"
+        "mct mct mct st2 st2 st2"
+        "mct mct mct st3 st3 st3"
+        "ct1 ct1 ct2 ct2 ct3 ct3"
+        "ct1 ct1 ct2 ct2 ct3 ct3"
+        "ftr ftr ftr ftr ftr ftr"
+        "ftr ftr ftr ftr ftr ftr"
+        "ftr ftr ftr ftr ftr ftr";
+    
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: repeat(14, auto);
+    max-width: 100%;
+    display: grid;
+    width: 100%;
+}
+
+
+@media screen and (max-width: 600px) {
+    .container {
+        grid-template-areas:
+            "hdr hdr hdr hdr hdr hdr"
+            "hdr hdr hdr hdr hdr hdr"
+            "hdr hdr hdr hdr hdr hdr"
+            "hdr hdr hdr hdr hdr hdr"
+            "nav nav nav nav nav nav"
+            "mct mct mct mct mct mct"
+            "mct mct mct mct mct mct"
+            "mct mct mct mct mct mct"
+            "st1 st1 st1 st1 st1 st1"
+            "st2 st2 st2 st2 st2 st2"
+            "st3 st3 st3 st3 st3 st3"
+            "ct1 ct1 ct1 ct1 ct1 ct1"
+            "ct2 ct2 ct2 ct2 ct2 ct2"
+            "ct3 ct3 ct3 ct3 ct3 ct3"
+            "ftr ftr ftr ftr ftr ftr"
+            "ftr ftr ftr ftr ftr ftr"
+            "ftr ftr ftr ftr ftr ftr";
+        
+        grid-template-columns: repeat(6, 1fr);
+        grid-template-rows: repeat(17, auto);
+        max-width: 100%;
+        display: grid;
+        width: 100%;
+
+        .nav--li {
+            padding: 1.8em;
+        }
+
+        .ftr {
+            color: white;
+            grid-area: ftr;
+            padding-top: 10%;
+            background: #000;
+            text-align: center;
+        }
+
+        .ftr__lst--itm--img {
+            width: 4em;
+            height: 4em;
+            width: auto;
+        }
+    }
+}

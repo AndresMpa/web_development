@@ -1,0 +1,16 @@
+$white: white;
+$ligthgray: lightgray;
+
+* {
+    color: $white;
+    padding: 0%;
+    margin: 0%;
+}
+
+body {
+    background-color: $ligthgray;
+}
+
+a {
+    text-decoration: none;
+}
