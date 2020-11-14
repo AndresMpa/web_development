@@ -12,13 +12,11 @@
 
     .ct2 {
         @extend %sideContent;
-
         grid-area: ct2;
     }
 
     .ct3 {
         @extend %sideContent;
-
         grid-area: ct3;
     }
 }
