@@ -151,7 +151,7 @@ ftr -> Footer
     padding-left: 4em;
 }
 
-.ftr__lst--itm--img {
+.container .ftr__lst--itm--img {
     width: 5em;
     height: 5em;
     width: auto;
@@ -160,4 +160,51 @@ ftr -> Footer
 .container .ftr__drs {
     margin: auto;
     max-width: 45%;
+}
+
+@media screen and (max-width: 600px) {
+    .container {
+        grid-template-areas:
+            "hdr hdr hdr hdr hdr hdr"
+            "hdr hdr hdr hdr hdr hdr"
+            "hdr hdr hdr hdr hdr hdr"
+            "hdr hdr hdr hdr hdr hdr"
+            "nav nav nav nav nav nav"
+            "mct mct mct mct mct mct"
+            "mct mct mct mct mct mct"
+            "mct mct mct mct mct mct"
+            "st1 st1 st1 st1 st1 st1"
+            "st2 st2 st2 st2 st2 st2"
+            "st3 st3 st3 st3 st3 st3"
+            "ct1 ct1 ct1 ct1 ct1 ct1"
+            "ct2 ct2 ct2 ct2 ct2 ct2"
+            "ct3 ct3 ct3 ct3 ct3 ct3"
+            "ftr ftr ftr ftr ftr ftr"
+            "ftr ftr ftr ftr ftr ftr"
+            "ftr ftr ftr ftr ftr ftr";
+        
+        grid-template-columns: repeat(6, 1fr);
+        grid-template-rows: repeat(17, auto);
+        max-width: 100%;
+        display: grid;
+        width: 100%;
+    }
+
+    .container .nav--li {
+        padding: 1.8em;
+    }
+
+    .container .ftr {
+        color: white;
+        grid-area: ftr;
+        padding-top: 10%;
+        background: #000;
+        text-align: center;
+    }
+
+    .container .ftr__lst--itm--img {
+        width: 4em;
+        height: 4em;
+        width: auto;
+    }
 }
