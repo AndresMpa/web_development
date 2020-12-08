@@ -1,11 +1,11 @@
 <template>
   <div id="app">
     <div id="nav">
-      <router-link to="/">Home</router-link>
-      <router-link to="/to_do">To do</router-link>
-      <router-link to="/in_progress">In progress</router-link>
-      <router-link to="/done">Done</router-link>
-      <router-link to="/about">About</router-link>
+      <router-link to="/">Home |</router-link>
+      <router-link to="/to_do"> To do |</router-link>
+      <router-link to="/in_progress"> In progress |</router-link>
+      <router-link to="/done"> Done |</router-link>
+      <router-link to="/about"> About</router-link>
     </div>
     <router-view />
   </div>
