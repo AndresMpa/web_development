@@ -5,8 +5,8 @@
     }
     .nav--li {
         padding: 2em;
-        border-radius: 5px;
         display: inline-flex;
+        @include border-radius(10px);
 
         &:hover {
             background-color: rgba(139, 0, 0, 0.795);

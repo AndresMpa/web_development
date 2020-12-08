@@ -1,5 +1,3 @@
-// Replace Information
-
 function updateNews(title, img, review, link) {
     let card = document.getElementsByTagName("article");
 }

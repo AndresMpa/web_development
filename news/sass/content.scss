@@ -1,22 +1,22 @@
+%sideContent {
+    background: darkgray;
+    padding: 3em;
+    margin: 2em;
+}
+
 .container{
     .ct1 {
-        background: darkgray;
+        @extend %sideContent;
         grid-area: ct1;
-        padding: 3em;
-        margin: 2em;
     }
 
     .ct2 {
-        background: darkgray;
+        @extend %sideContent;
         grid-area: ct2;
-        padding: 3em;
-        margin: 2em;
     }
 
     .ct3 {
-        background: darkgray;
+        @extend %sideContent;
         grid-area: ct3;
-        padding: 3em;
-        margin: 2em;
     }
 }
