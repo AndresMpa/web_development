@@ -20,7 +20,7 @@ class UI {
     `;
     productList.appendChild(element);
     this.reset();
-    this.alert("You added a product correctly", "success")
+    this.alert("You added a product correctly", "success");
   }
 
   removeProduct(element) {
@@ -38,9 +38,9 @@ class UI {
     const container = document.querySelector(".container");
     const app = document.querySelector("#App");
     container.insertBefore(msgDiv, app);
-    setTimeout(function() {
+    setTimeout(function () {
       document.querySelector(".alert").remove();
-    }, 3000)
+    }, 3000);
   }
 
   reset() {
@@ -56,10 +56,13 @@ document
     const date = document.getElementById("dateRegistered").value;
     const price = document.getElementById("productPrice").value;
     //console.log(price, name, date);
-
     const product = new Product(name, date, price);
     const ui = new UI();
-    ui.addProduct(product);
+    if (name === null || date === null || price === null) {
+      ui.addProduct(product);
+    } else {
+      ui.alert("You have to complete the form", "info");
+    }
 
     //console.log(product);
 
