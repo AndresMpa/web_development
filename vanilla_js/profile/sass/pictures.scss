@@ -1,0 +1,16 @@
+%center {
+  width: 50%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+%responsiveFullSize {
+  width: 100%;
+  height: auto;
+}
+
+.profile {
+  @extend %center;
+  @include border-radius(50%);
+}

@@ -1,0 +1,40 @@
+//Color palette
+
+//Basics
+$white: #ffffff;
+$black: #000000;
+$gray: #222222;
+
+//Schema
+$yellow: #E0C60F;
+$darkBlue: #193394;
+$ligthBlue: #2B51E0;
+$darkPurple: #5F1994;
+$ligthPurple: #8204E0;
+
+//Font
+$projectFont: cursive, fantasy, Arial, Helvetica, sans-serif;
+$fontSize: 1em;
+
+* {
+  margin: 0%;
+  padding: 0%;
+  font-size: $fontSize;
+  font-family: $projectFont;
+}
+
+body {
+  background-color: $black;
+  color: $white;
+}
+
+a {
+	text-decoration: none;
+	color: $yellow;
+  opacity: 0.8;
+}
+
+a:hover {
+  text-decoration: underline;
+  color: $yellow;
+}

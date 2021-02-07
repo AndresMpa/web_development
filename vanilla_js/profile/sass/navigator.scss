@@ -1,0 +1,15 @@
+//.navigator {
+  //background-color: $ligthBlue;
+//}
+
+//.navigator:hover {
+  //background-color: $darkBlue;
+//}
+
+.navigator--menu {
+  @include floats(left);
+}
+
+.navigator--exit {
+  @include floats(right);
+}

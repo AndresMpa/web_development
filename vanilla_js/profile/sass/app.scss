@@ -1,0 +1,19 @@
+.app {
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.app--leftContent {
+  background-color: $ligthBlue;
+  img {
+    float: left;
+  }
+}
+
+.app--rightContent {
+  background-color: $ligthPurple;
+  img {
+    float: right;
+  }
+}
