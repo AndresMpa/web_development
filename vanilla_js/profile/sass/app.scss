@@ -8,6 +8,8 @@
   background-color: $ligthBlue;
   img {
     float: left;
+    border: red($color: #000000);
+    border-radius: 50%;
   }
 }
 

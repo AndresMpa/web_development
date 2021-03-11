@@ -54,6 +54,8 @@ a:hover {
 }
 .app--leftContent img {
   float: left;
+  border: 0;
+  border-radius: 50%;
 }
 
 .app--rightContent {
