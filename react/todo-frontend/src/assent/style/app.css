@@ -1,0 +1,40 @@
+.btn {
+  grid-area: btn;
+}
+
+.nav {
+  grid-area: nav;
+}
+
+.ctn {
+  grid-area: ctn;
+}
+
+.frm {
+  grid-area: frm;
+}
+
+.btn,
+.nav,
+.ctn,
+.frm {
+  padding: 1.5em;
+}
+
+/*Grid*/
+
+.app {
+  grid-template-areas:
+    "nav nav btn btn btn btn"
+    "nav nav ctn ctn ctn ctn"
+    "nav nav ctn ctn ctn ctn"
+    "nav nav ctn ctn ctn ctn"
+    "nav nav ctn ctn ctn ctn"
+    "nav nav frm frm frm frm";
+
+  grid-template-columns: repeat(6, 1fr);
+  grid-template-rows: repeat(6, auto);
+  max-width: 100%;
+  display: grid;
+  width: 100%;
+}

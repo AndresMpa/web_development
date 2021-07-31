@@ -1,0 +1,24 @@
+@import "color.css";
+
+.tags {
+  display: flex;
+  width: 100%;
+}
+
+.tags--button {
+  text-align: center;
+  margin: auto;
+  width: 40%;
+}
+
+.tags--button__tag {
+  width: 80%;
+  margin: auto;
+  padding: 10%;
+  display: inline;
+  font-size: 18px;
+  border-style: none;
+  color: var(--text);
+  border-radius: 25px;
+  background-color: var(--main);
+}

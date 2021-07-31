@@ -1,0 +1,150 @@
+/*Ajustes base*/
+
+* {
+  padding: 0%;
+  margin: 0%;
+}
+
+hr {
+  width: 80%;
+  margin: 0 auto 2% auto;
+}
+
+.d-100 {
+  width: 100%;
+}
+
+.d-50 {
+  width: 45%;
+}
+
+.d-none {
+  display: none;
+}
+
+.d-center {
+  text-align: center;
+}
+
+/*Clases relacionadas al modal*/
+
+.modalButton {
+  padding: 0 2%;
+  width: 96%;
+}
+
+.modalButton--container {
+  width: 50%;
+  padding: 2% 0%;
+  margin: 0% auto;
+  text-align: center;
+}
+
+.modalButton--container__button {
+  padding: 3%;
+  border: none;
+  color: white;
+  margin: 0% auto;
+  font-size: 16px;
+  text-align: center;
+  border-radius: 5px;
+  text-decoration: none;
+  display: inline-block;
+  background-color: blue;
+}
+
+/*Clases de formulario*/
+
+.rtvc {
+  background: #1e1e1e;
+  border-radius: 5px;
+  position: absolute;
+  margin: 0 auto;
+  color: white;
+  padding: 1%;
+  width: 94%;
+
+  right: -5px;
+  left: -5px;
+  top: 10px;
+}
+
+.rtvc--container {
+  width: 98%;
+  padding: 1%;
+  margin: 0 auto;
+}
+
+.rtvc--container__title {
+  padding-bottom: 2%;
+  text-align: center;
+  font-size: 1.8em;
+}
+
+.form--container {
+  display: flex;
+  padding: 0 1%;
+}
+
+.form--container__input {
+  margin: 0.5% auto;
+  display: inline;
+  padding: 0.5%;
+  width: 95%;
+}
+
+.form--container__textarea {
+  text-align: initial;
+  margin: 0.5% 0.5%;
+  height: 200px;
+  width: 100%;
+}
+
+.form--container__button {
+  width: 50%;
+  border: none;
+  color: white;
+  padding: 1.5%;
+  margin: 0% auto;
+  font-size: 16px;
+  text-align: center;
+  border-radius: 5px;
+  text-decoration: none;
+  display: inline-block;
+  background-color: blue;
+}
+
+.formFadeIn {
+  animation-name: fadeIn;
+  animation-duration: 0.6s;
+}
+
+.formFadeOut {
+  animation-name: fadeOut;
+  animation-duration: 0.4s;
+}
+
+@keyframes fadeIn {
+  0% {
+    left: -200px;
+    opacity: 0;
+  }
+  100% {
+    left: 0px;
+    opacity: 1;
+  }
+}
+
+@keyframes fadeOut {
+  0% {
+    right: 0px;
+    opacity: 1;
+  }
+  99% {
+    right: -200px;
+    opacity: 0;
+  }
+  100% {
+    display: none;
+  }
+}

@@ -1,0 +1,15 @@
+@import "color.css";
+
+.adder {
+  text-align: center;
+}
+
+.adder--button {
+  padding: 3%;
+  width: 94%;
+  display: inline;
+  font-size: 18px;
+  border-style: none;
+  color: var(--text);
+  border-radius: 25px;
+}

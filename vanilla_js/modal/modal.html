@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="stylesheet" href="modal.css" />
+
+    <title>Document</title>
+
+  </head>
+  <body>
+    <section class="modalButton">
+      <article class="modalButton--container">
+        
+        <!--TODO: Angelica cambia esto, que así se ve como raro mié 28 jul 2021 11:34:02-->
+        <button class="modalButton--container__button" id="modalButton">Formulario video</button>
+
+      </article>
+    </section>
+
+    <section class="rtvc d-none" id="modalForm">
+      <article class="rtvc--container">
+
+        <span >
+          <h2 class="rtvc--container__title">Ingrese los datos de este formulario acá</h2>
+        </span>
+
+        <hr>
+        <!--
+        TODO:
+        Cambiar el metodo de GET a lo que se
+        este usando, y agregar el action
+        
+        Written mié 28 jul 2021 13:44:42
+        By: andresmpa
+        -->
+        <form action="" method="GET" action="rtvc--container__form">
+
+          <div class="form--container">
+            <input type="text" class="form--container__input d-100" />
+          </div>
+
+          <div class="form--container">
+            <input type="text" class="form--container__input d-50" />
+            <input type="text" class="form--container__input d-50" />
+          </div>
+
+          <div class="form--container">
+            <input type="text" class="form--container__input" />
+            <input type="text" class="form--container__input" />
+            <input type="text" class="form--container__input" />
+            <input type="text" class="form--container__input" />
+          </div>
+           
+          <div class="form--container">
+            <input type="text" class="form--container__textarea" />
+            <input type="text" class="form--container__textarea" />
+            <input type="text" class="form--container__textarea" />
+          </div>
+
+          <div class="form--container">
+            <input id="keep" type="submit" class="form--container__button" value="Guardar">
+          </div>
+
+          <div class="form--container">
+            <input id="close" type="submit" class="form--container__button" value="Cerrar">
+          </div>
+        </form>
+
+      </article>
+    </section>
+
+    <script src="./modal.js"></script>
+
+  </body>
+</html>

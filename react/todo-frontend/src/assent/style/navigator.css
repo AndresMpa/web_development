@@ -1,0 +1,16 @@
+@import "color.css";
+
+.navigator {
+  border-radius: 15px;
+  font-size: 18px;
+  padding: 3%;
+}
+
+.navigator--item {
+  border-radius: 25px;
+  padding: 3%;
+}
+
+.navigator--item:hover {
+  background-color: var(--second);
+}

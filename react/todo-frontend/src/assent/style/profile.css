@@ -1,0 +1,7 @@
+@import "color.css";
+
+.profile {
+  border-radius: 15px;
+  height: 100px;
+  padding: 3%;
+}

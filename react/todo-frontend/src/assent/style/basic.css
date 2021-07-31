@@ -1,0 +1,32 @@
+@import "color.css";
+
+* {
+  padding: 0%;
+  margin: 0%;
+}
+
+body {
+  background-image: url("../img/background.jpg");
+  background-position: center center;
+  background-size: 1600px 1200px;
+  background-repeat: no-repeat;
+}
+
+ul,
+li {
+  text-decoration: none;
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: var(--text);
+}
+
+.bg {
+  background-color: var(--main);
+}
+
+.bg-alt {
+  background-color: var(--second);
+}
