@@ -2,8 +2,7 @@ import React, { Component } from "react";
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 
 import Dashboard from "../component/dashboard";
-import EditStudent from "../component/edit-student.component";
-import StudentList from "../component/student-list.component";
+//const Dashboard = React.lazy(() => import("../component/history"))
 
 export default class RouterSwitcher extends Component {
   render() {
@@ -11,8 +10,11 @@ export default class RouterSwitcher extends Component {
       <Switch>
         <Route exact path="/" component={Dashboard} />
         <Route path="/dashboard" component={Dashboard} />
-        <Route path="/edit-student/:id" component={EditStudent} />
-        <Route path="/student-list" component={StudentList} />
+        <Route path="/history" component={Dashboard} />
+        <Route path="/progress" component={Dashboard} />
+        <Route path="/schedule" component={Dashboard} />
+        <Route path="/setting" component={Dashboard} />
+        <Route path="/log-out" component={Dashboard} />
       </Switch>
     );
   }
