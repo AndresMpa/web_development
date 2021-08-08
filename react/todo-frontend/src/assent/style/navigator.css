@@ -6,6 +6,17 @@
   padding: 3%;
 }
 
+.display {
+  transition: width 2s, height 4s;
+}
+
+.navigator--displayer {
+  border-radius: 25px;
+  color: var(--text);
+  display: none;
+  padding: 2%;
+}
+
 .navigator--item {
   border-radius: 25px;
   padding: 3%;
@@ -13,4 +24,41 @@
 
 .navigator--item:hover {
   background-color: var(--second);
+}
+
+@media screen and (max-width: 800px) {
+  .navigator {
+    display: inline-block;
+    float: right;
+    width: 60%;
+  }
+
+  .navigator a {
+    display: inline-block;
+    width: 50%;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .navigator--displayer {
+    display: inline;
+  }
+
+  .navigator {
+    text-align: center;
+    display: none;
+    width: 85%;
+  }
+
+  .navigator a {
+    display: inline;
+    width: 50%;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .navigator {
+    margin-top: 2%;
+    width: 95%;
+  }
 }

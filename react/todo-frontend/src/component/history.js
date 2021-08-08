@@ -4,7 +4,7 @@ export default class History extends Component {
   render() {
     return (
       <div>
-        <h2>My list</h2>
+        <h2>History</h2>
         <ul>
           <li></li>
         </ul>

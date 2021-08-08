@@ -22,3 +22,19 @@
   border-radius: 25px;
   background-color: var(--main);
 }
+
+@media screen and (max-width: 520px) {
+  .tags {
+    display: block;
+  }
+
+  .tags--button {
+    display: block;
+    width: 95%;
+  }
+
+  .tags--button__tag {
+    margin: 2%;
+    padding: 2%;
+  }
+}

@@ -1,0 +1,25 @@
+hr {
+  width: 80%;
+  margin: 2% 0;
+}
+
+h2 {
+  margin-left: 1%;
+}
+
+ul {
+  margin-left: 2%;
+}
+.item {
+  margin: 1%;
+  font-size: 24px;
+}
+
+.dashboard {
+  -webkit-box-shadow: 12px 11px 19px -2px rgba(0, 0, 0, 0.58);
+  box-shadow: 12px 11px 19px -2px rgba(0, 0, 0, 0.58);
+  background-color: ghostwhite;
+  border-radius: 25px;
+  padding: 1.5% 0;
+  width: 100%;
+}

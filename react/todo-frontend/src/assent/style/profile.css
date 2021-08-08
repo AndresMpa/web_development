@@ -2,6 +2,31 @@
 
 .profile {
   border-radius: 15px;
-  height: 100px;
-  padding: 3%;
+  text-align: center;
+  margin-bottom: 5px;
+}
+
+.profile--container {
+  text-align: center;
+  margin: 0% auto;
+  padding: 6% 3%;
+}
+
+.profile--container__image {
+  background-color: silver;
+  border-radius: 50%;
+  width: 180px;
+}
+
+@media screen and (max-width: 800px) {
+  .profile {
+    display: inline-flex;
+    width: 30%;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .profile {
+    display: none;
+  }
 }

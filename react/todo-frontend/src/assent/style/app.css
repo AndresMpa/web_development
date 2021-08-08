@@ -1,24 +1,21 @@
 .btn {
   grid-area: btn;
+  padding-top: 1.5em;
 }
 
 .nav {
   grid-area: nav;
+  padding: 1em 1.5em;
 }
 
 .ctn {
   grid-area: ctn;
+  padding: 0 1.5em;
 }
 
 .frm {
   grid-area: frm;
-}
-
-.btn,
-.nav,
-.ctn,
-.frm {
-  padding: 1.5em;
+  padding: 0 1.5em;
 }
 
 /*Grid*/
@@ -37,4 +34,23 @@
   max-width: 100%;
   display: grid;
   width: 100%;
+}
+
+@media screen and (max-width: 800px) {
+  .app {
+    grid-template-areas:
+      "nav nav nav nav nav nav"
+      "nav nav nav nav nav nav"
+      "ctn ctn ctn ctn ctn ctn"
+      "ctn ctn ctn ctn ctn ctn"
+      "ctn ctn ctn ctn ctn ctn"
+      "btn btn btn btn btn btn"
+      "frm frm frm frm frm frm";
+
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: repeat(7, auto);
+    max-width: 100%;
+    display: grid;
+    width: 100%;
+  }
 }
