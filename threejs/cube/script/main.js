@@ -58,18 +58,36 @@ scene.add(cube);
  * */
 
 let distanceZ = 2;
+let distanceY = 1;
+let distanceX = 1;
 camera.position.z = distanceZ;
 
 const app = document.querySelector("#app");
 
 app.addEventListener("keydown", (e) => {
-  if (e.key === "ArrowUp") {
+  if (e.key === "w") {
     distanceZ += 1;
     camera.position.z = distanceZ;
   }
-  if (e.key === "ArrowDown") {
+  if (e.key === "s") {
     distanceZ -= 1;
     camera.position.z = distanceZ;
+  }
+  if (e.key === "a") {
+    distanceX += 1;
+    camera.position.x = distanceX;
+  }
+  if (e.key === "d") {
+    distanceX -= 1;
+    camera.position.x = distanceX;
+  }
+  if (e.key === "q") {
+    distanceY += 1;
+    camera.position.y = distanceY;
+  }
+  if (e.key === "e") {
+    distanceY -= 1;
+    camera.position.y = distanceY;
   }
 });
 
