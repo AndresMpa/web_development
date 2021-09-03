@@ -30,33 +30,7 @@
       }
     }
     console.log(keyPressed);
-  });
-
-  window.addEventListener("keypress", (e) => {
-    keyPressed[e.key] = true;
-
-    if (keyPressed["a"]) {
-      if (keyPressed["s"]) {
-        e.preventDefault();
-        app.innerHTML = `<h2>${keyPressed}</h2>`;
-      }
-    }
-
-    if (keyPressed["Control"]) {
-      if (keyPressed["ArrowLeft"]) {
-        e.preventDefault();
-        app.innerHTML = `<h2>${keyPressed}</h2>`;
-      }
-    }
-
-    if (keyPressed["Control"]) {
-      if (keyPressed["ArrowRight"]) {
-        e.preventDefault();
-        app.innerHTML = `<h2>${keyPressed}</h2>`;
-      }
-    }
-    console.log(keyPressed);
-  });
+  }, false);
 
   window.addEventListener("keyup", () => {
     app.innerHTML = `<h2>Commands</h2>`;
@@ -67,5 +41,5 @@
       ArrowLeft: false,
       ArrowRight: false,
     };
-  });
+  }, false);
 })();
