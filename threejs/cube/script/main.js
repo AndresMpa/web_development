@@ -2,7 +2,9 @@
 
 //Color palette
 const colors = {
-  gree: 0x00ff00,
+  black: 0x000000,
+  white: 0xffffff,
+  green: 0x00ff00,
   blue: 0x0000ff,
   grayBlue: 0x2a3b4c,
 };
@@ -12,10 +14,12 @@ const colors = {
  * displayed
  * */
 let scene = new THREE.Scene();
-scene.background = new THREE.Color(colors.grayBlue);
+scene.background = new THREE.Color(colors.grayBlue); //Set main scene color
+scene.fog = new THREE.Fog(colors.black, 0.4, 8); //Set an effect
 
 /* The camera shows the scene in an
- * specific angle
+ * specific angle in this case this
+ * angle is 75°
  * */
 let camera = new THREE.PerspectiveCamera(
   75,
@@ -42,7 +46,7 @@ let geometry = new THREE.BoxGeometry();
  * */
 let material = new THREE.MeshBasicMaterial({
   color: colors.blue,
-  wireframe: true,
+  //wireframe: true,
 });
 
 /* The cube is made of a geometry, and a material
