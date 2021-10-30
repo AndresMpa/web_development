@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import "../style/linkImage.css";
+import "../styles/index.css";
 
 export default class LinkImage extends Component {
   constructor(props) {
