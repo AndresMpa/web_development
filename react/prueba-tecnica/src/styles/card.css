@@ -1,2 +1,14 @@
 @import "basic.css";
 
+.card {
+  width: 20%;
+}
+
+.card__img {
+  width: 35%;
+  justify-self: center;
+}
+
+.card__title {
+  color: var(--primary);
+}

@@ -7,21 +7,21 @@ export default class LinkImage extends Component {
 
     // Setting up state
     this.state = {
-      description: "",
-      link: "",
+      img: "https://media-cdn.tripadvisor.com/media/photo-s/0c/bb/a3/97/predator-ride-in-the.jpg",
+      description: "Este es texto de relleno",
+      link: "Algo",
     };
   }
 
   render() {
     return (
       <article className="">
-        <h2>{cardName}</h2>
-        <hr />
+        <img src={this.state.img} alt="fondo" />
         <div>
-          <p>{description}</p>
+          <p>{this.state.description}</p>
         </div>
-        <a href="#">
-          <button>{link}</button>
+        <a href="/">
+          <button>{this.state.link}</button>
         </a>
       </article>
     );

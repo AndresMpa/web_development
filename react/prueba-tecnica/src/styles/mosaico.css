@@ -1,0 +1,25 @@
+@import "basic.css";
+
+.mosaico {
+  grid-template-areas:
+    "mo1 mo1 mo4 mo5"
+    "mo2 mo3 mo3 mo5";
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(2, auto);
+  max-width: 100%;
+  display: grid;
+  width: 100%;
+}
+
+.msc_1 {
+  grid-area: mo1;
+}
+.msc_2 {
+  grid-area: mo2;
+}
+.msc_3 {
+  grid-area: mo3;
+}
+.msc_4 {
+  grid-area: mo4;
+}

@@ -2,6 +2,7 @@
   --backgroundColor: #ffffff;
   --backgroundSecondaryColor: gray;
   --letterColor: #000;
+  --hcLetterColor: #000;
   --linksColor: #000;
   --primary: blue;
   --secondary: gray;
@@ -27,4 +28,12 @@ li {
 a {
   text-decoration: none;
   color: var(--linksColor);
+}
+
+.d-flex {
+  display: flex;
+}
+
+.justify {
+  justify-content: space-evenly;
 }

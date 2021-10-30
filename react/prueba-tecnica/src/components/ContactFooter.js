@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import "../style/index.css";
+import "../styles/index.css";
 
 export default class ContactFooter extends Component {
   constructor(props) {
@@ -57,7 +57,7 @@ export default class ContactFooter extends Component {
             Arch.
           </p>
         </article>
-        <article>
+        <article className="footer--card">
           <h2 className="footer--card__title">Titulo de ejemplo</h2>
           <input className="footer--card__input" placeholder="Contactenos" />
           <hr />
