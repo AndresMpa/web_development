@@ -1,0 +1,18 @@
+@import "basic.css";
+
+.footer {
+  background-color: var(--backgroundSecondaryColor);
+  display: inline-flex;
+}
+
+.footer--card {
+  width: 25%;
+}
+
+.footer--card__title {
+  color: var(--title);
+}
+
+.footer--card__input {
+  padding: 0.5%;
+}
