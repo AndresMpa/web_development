@@ -12,13 +12,16 @@
       <router-link class="link" to="/check-out">Salida & factura</router-link>
     </div>
     <p class="slots">Espacios: {{ this.$store.state.slot }}</p>
+
     <div class="navbar-right">
-      <img
-        alt="Parking"
-        class="logout parking"
-        src="../assets/logo.png"
-        srcset="../assets/logout.png"
-      />
+      <a href="https://github.com/AndresMpa/web_development/tree/main/vue/parking-system">
+        <img
+          alt="Parking"
+          class="logout parking"
+          src="../assets/logo.png"
+          srcset="../assets/logout.png"
+        />
+      </a>
     </div>
   </nav>
 </template>
