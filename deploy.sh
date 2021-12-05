@@ -10,5 +10,5 @@ cd dist
 git init
 git add --all
 git commit -m 'deploy'
-git push git@github.com:AndresMpa/web_development.git parking-system
+git push -f git@github.com:AndresMpa/web_development.git parking-system:parking-system
 cd -
