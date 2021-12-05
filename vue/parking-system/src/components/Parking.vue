@@ -95,7 +95,7 @@ export default {
   },
   methods: {
     clearAddress() {
-      this.address = ""
+      this.address = "";
     },
     discountAvailable(ticket) {
       return ticket ? "Si" : "No";
@@ -103,7 +103,7 @@ export default {
     clearRegister(event) {
       event.preventDefault();
 
-      this.axis = 1;
+      this.axis = 0;
       this.address = "";
       this.bigCar = false;
       this.deposite = false;
@@ -114,6 +114,8 @@ export default {
 
       if (this.address === "") {
         this.address = "Este campo es necesario";
+      } else if (this.$store.state.slots - 1 <= 0) {
+        this.address = "Ya no hay más espacios disponibles";
       } else {
         let newCar;
         if (this.bigCar) {
@@ -139,6 +141,7 @@ export default {
         }
 
         this.$store.dispatch("addCar", newCar);
+        this.$store.dispatch("removeSlot");
         this.clearRegister(event);
       }
     },
@@ -147,11 +150,7 @@ export default {
     currentHour() {
       let today = new Date();
       let date =
-        today.getHours() +
-        ":" +
-        today.getMinutes() +
-        ":" +
-        today.getSeconds();
+        today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds();
       return date;
     },
     currentDate() {

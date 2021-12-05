@@ -57,9 +57,6 @@ export default {
       return ticket ? "Si" : "No";
     },
   },
-  created() {
-    this.$store.dispatch("loadRegisteredStorage");
-  },
 };
 </script>
 

@@ -11,18 +11,25 @@
       <router-link class="link" to="/check-in">Ingreso</router-link>
       <router-link class="link" to="/check-out">Salida & factura</router-link>
     </div>
-    <img
-      alt="Parking"
-      class="divider logout parking"
-      src="../assets/logo.png"
-      srcset="../assets/logout.png"
-    />
+    <p class="slots">Espacios: {{ this.$store.state.slot }}</p>
+    <div class="navbar-right">
+      <img
+        alt="Parking"
+        class="logout parking"
+        src="../assets/logo.png"
+        srcset="../assets/logout.png"
+      />
+    </div>
   </nav>
 </template>
 
 <script>
 export default {
   name: "Navbar",
+  beforeCreate() {
+    this.$store.dispatch("loadAvalibleInfo");
+    this.$store.dispatch("loadAvalibleSlot");
+  },
 };
 </script>
 
@@ -40,8 +47,8 @@ export default {
 }
 
 .parking {
-  width: 50px;
-  height: 45px;
+  width: 35px;
+  height: 30px;
 }
 
 .logout {
@@ -57,5 +64,16 @@ export default {
 .link {
   margin: 0% 8px;
   text-decoration: none;
+}
+
+.navbar-right {
+  display: flex;
+  margin-left: auto;
+}
+
+.slots {
+  color: white;
+  display: flex;
+  align-items: center;
 }
 </style>

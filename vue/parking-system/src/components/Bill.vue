@@ -1,8 +1,8 @@
 <template>
-  <section class="bill">
+  <section class="bill" v-if="this.$store.state.car.length > 0">
     <article class="bill-create">
       <h2>Factura a pagar</h2>
-      <form action="" class="bill-form">
+      <form action="" class="bill-form mt-3">
         <select class="bill-form-select" v-model="selected">
           <option
             v-for="(address, index) in registeredAddress"
@@ -34,6 +34,10 @@
           </p>
           <p v-if="currentCar.deposite">Se le aplica descuento</p>
           <p v-else>No tiene descuentos</p>
+
+          <button class="create-bill" @click="getBill($event)">
+            Generar factura
+          </button>
         </figure>
       </form>
     </article>
@@ -66,6 +70,13 @@
           Gracias por confiar la seguridad de su auto a Black Car, vuelva pronto
         </cite>
       </div>
+    </article>
+  </section>
+  <section v-else>
+    <article class="no-cars">
+      <hr class="bill-divider mt-3" />
+      <h2>No hay autos aún</h2>
+      <hr class="bill-divider mt-3" />
     </article>
   </section>
 </template>
@@ -138,7 +149,7 @@ export default {
     },
     getSubtotal() {
       switch (this.currentCar.carType) {
-        case "Turimo": {
+        case "Turismo": {
           return (this.getUsedHour(false) * 1.5) / 60;
         }
         case "Todo terreno": {
@@ -160,18 +171,19 @@ export default {
       let subtotal = this.getSubtotal();
       if (this.currentCar.deposite) {
         return (subtotal -= subtotal * 0.4);
+      } else {
+        return subtotal;
       }
     },
-    getBill() {
-      console.log(this.currentCar);
+    getBill(event) {
+      event.preventDefault();
       this.usedFor = this.getUsedHour();
       this.carType = this.currentCar.carType;
       this.subtotal = "$" + Math.ceil(this.getSubtotal()) + ".00";
       this.total = "$" + Math.ceil(this.getTotal()) + ".00";
+      this.$store.dispatch("removeCar", this.currentCar)
+      this.$store.dispatch("addSlot");
     },
-  },
-  created() {
-    this.$store.dispatch("loadRegisteredStorage");
   },
   computed: {
     registeredAddress() {
@@ -189,7 +201,6 @@ export default {
   watch: {
     selected() {
       this.getCar();
-      this.getBill();
     },
   },
 };
@@ -198,6 +209,7 @@ export default {
 <style lang="css" scoped>
 cite {
   padding: 3% 1.2%;
+
   display: flex;
   justify-content: flex-end;
 }
@@ -221,10 +233,17 @@ p span:nth-child(2) {
   text-align: center;
 }
 
+.no-cars {
+  display: flex;
+  flex-direction: column;
+  justify-items: center;
+  align-items: center;
+}
+
 .bill {
   display: grid;
   grid-template-columns: auto auto;
-  padding: 2.5%;
+  padding: 2.5% 2.5% 0;
 }
 
 .bill-divider {
@@ -264,5 +283,17 @@ p span:nth-child(2) {
   padding: 2% 0% 0%;
   margin: 0% auto;
   border: 1px solid lightgray;
+}
+
+.create-bill {
+  border: none;
+  color: white;
+  padding: 1.5%;
+  border-radius: 8px;
+  background-color: darkblue;
+
+  display: flex;
+  margin: 0 auto 5px;
+  justify-self: center;
 }
 </style>
