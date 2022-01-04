@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="waveform"></div>
+    <button id="backward">atras</button>
+    <button id="playStop">play/pause</button>
+    <button id="forward">adelante</button>
+    <script src="https://unpkg.com/wavesurfer.js"></script>
+
+    <script>
+      let wavesurfer = WaveSurfer.create({
+        container: document.querySelector("#waveform"),
+        progressColor: "#4353FF",
+        cursorColor: "#4353FF",
+        waveColor: "#D9DCFF",
+        cursorWidth: 1,
+        barRadius: 3,
+        barWidth: 1,
+        height: 100,
+        barGap: 3,
+      });
+
+      wavesurfer.load("./test2.mp3");
+
+      wavesurfer.on("ready", function () {
+        wavesurfer.play();
+      });
+
+      let backward = document.querySelector("#backward");
+      backward.addEventListener("click", () => {
+        wavesurfer.skip(-5);
+      });
+      let playStop = document.querySelector("#playStop");
+      playStop.addEventListener("click", () => {
+        wavesurfer.playPause();
+      });
+      let forward = document.querySelector("#forward");
+      forward.addEventListener("click", () => {
+        wavesurfer.skip(5);
+        wavesurfer.setPlaybackRate(2);
+      });
+    </script>
+  </body>
+</html>
