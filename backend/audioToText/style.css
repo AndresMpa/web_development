@@ -1,0 +1,55 @@
+:root {
+  --secondary: rgba(0, 14, 14, 0.5);
+  --third: rgba(0, 20, 40, 0.5);
+  --main: darkturquoise;
+  --letterColor: #000;
+  --linksColor: #000;
+}
+
+* {
+  margin: 0%;
+  padding: 0%;
+  overflow-anchor: none;
+  color: var(--letterColor);
+}
+
+body {
+  background-color: var(--main);
+}
+
+ul,
+li {
+  text-decoration: none;
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: var(--linksColor);
+}
+
+#test {
+  margin: 3% auto;
+  display: block;
+  height: 60vh;
+  width: 80vw;
+}
+
+#recorder {
+  margin: 0% auto;
+  display: block;
+
+  background-color: var(--secondary);
+  border: 1px solid var(--third);
+  border-radius: 15px;
+  padding: 0.8%;
+}
+
+#recorder:hover {
+  background-color: var(--third);
+  border: 1px solid var(--secondary);
+}
+
+#recorder i {
+  color: white;
+}
