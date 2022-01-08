@@ -1,7 +1,7 @@
-import { TSSRecordToFile } from "./plugins/TSSRecordToFile.js";
-import { TSSFileToText } from "./plugins/TSSFileToText.js";
-import { RecordToFile } from "./plugins/RecordToFile.js";
-import { FileToText } from "./plugins/FileToText.js";
+import TSSRecordToFile from "./plugins/TSSRecordToFile.js";
+import TSSFileToText from "./plugins/TSSFileToText.js";
+import RecordToFile from "./plugins/RecordToFile.js";
+import FileToText from "./plugins/FileToText.js";
 
 import AudioToText from "./AudioToText.js";
 
@@ -13,24 +13,32 @@ const detectBrowser = () => {
   ) {
     return new AudioToText({
       browser: "Opera",
-      plugin: [TSSRecordToFile(), TSSFileToText()],
+      recordMethod: "TTS",
+      writerPlugin: TSSFileToText,
+      recordPlugin: TSSRecordToFile,
     });
   } else if (navigator.userAgent.indexOf("Firefox") != -1) {
     return new AudioToText({
       browser: "Firefox",
-      plugin: [TSSRecordToFile(), TSSFileToText()],
+      recordMethod: "TTS",
+      writerPlugin: TSSFileToText,
+      recordPlugin: TSSRecordToFile,
     });
 
     // SpeechRecognition
   } else if (navigator.userAgent.indexOf("Chrome") != -1) {
     return new AudioToText({
       browser: "Chrome",
-      plugin: [RecordToFile(), FileToText()],
+      recordMethod: "WebAPI",
+      writerPlugin: FileToText,
+      recordPlugin: RecordToFile,
     });
   } else if (navigator.userAgent.indexOf("Safari") != -1) {
     return new AudioToText({
       browser: "Safari",
-      plugin: [RecordToFile(), FileToText()],
+      recordMethod: "WebAPI",
+      writerPlugin: FileToText,
+      recordPlugin: RecordToFile,
     });
   } else if (
     navigator.userAgent.indexOf("MSIE") != -1 ||
@@ -38,7 +46,9 @@ const detectBrowser = () => {
   ) {
     return new AudioToText({
       browser: "IE",
-      plugin: [RecordToFile(), FileToText()],
+      recordMethod: "WebAPI",
+      writerPlugin: FileToText,
+      recordPlugin: RecordToFile,
     });
   } else {
     return "Not Supported";
