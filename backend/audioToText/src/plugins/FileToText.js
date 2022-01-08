@@ -1,3 +1,3 @@
-class FileToText {}
+function FileToText() {}
 
 export default FileToText

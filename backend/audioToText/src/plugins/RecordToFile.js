@@ -1,4 +1,4 @@
-class RecordToFile {}
+function RecordToFile() {}
 
 export default RecordToFile
 
