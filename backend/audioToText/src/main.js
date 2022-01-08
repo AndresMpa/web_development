@@ -3,11 +3,12 @@ import detectBrowser from "./browserHandler.js";
 const browser = detectBrowser();
 
 const recorderButton = document.querySelector("#recorder");
+const test = document.querySelector("#test")
 
 recorderButton.onmousedown = () => {
-  console.log(`${browser.record()} Recording`);
+  browser.record();
 };
 
 recorderButton.onmouseup = () => {
-  console.log(`Writing ${browser.transcription}`);
+  test.value = browser.transcription
 };
