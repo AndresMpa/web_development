@@ -28,6 +28,13 @@ a {
   color: var(--linksColor);
 }
 
+#record {
+  margin: 3% auto;
+  display: block;
+  height: 5vh;
+  width: 60vw;
+}
+
 #test {
   margin: 3% auto;
   display: block;
