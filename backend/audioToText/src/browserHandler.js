@@ -21,8 +21,8 @@ const detectBrowser = () => {
     return new AudioToText({
       browser: "Firefox",
       recordMethod: "TTS",
-      writerPlugin: TSSFileToText,
-      recordPlugin: TSSRecordToFile,
+      writerPlugin: FileToText,
+      recordPlugin: RecordToFile,
     });
 
     // SpeechRecognition
