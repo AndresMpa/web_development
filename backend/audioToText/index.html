@@ -3,11 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link
-      type="image/x-icon"
-      rel="shortcut icon"
-      href="assent/icon.png"
-    />
+    <link type="image/x-icon" rel="shortcut icon" href="assent/icon.png" />
     <link
       rel="stylesheet"
       crossorigin="anonymous"
@@ -19,11 +15,37 @@
   </head>
   <body>
     <main>
+      <textarea name="record" id="record"></textarea>
       <textarea name="test" id="test"></textarea>
       <button id="recorder">
         <i class="fas fa-microphone"></i>
       </button>
     </main>
-    <script type="module" src="./src/main.js"></script>
+    <section style="display: none">
+      <article>
+        <h2>Speech Recognition implementation error</h2>
+        <p>
+          It seems that your are running this software on firefox, please enable
+          <code>webspeech.recognition</code>, to use this functionality, it is
+          not enable by default,
+          <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1248897#c102">
+            check this link
+          </a>
+          for more information about it...
+        </p>
+        <h3>Instruction</h3>
+        <div>
+          <p>
+            To solve this problem go to
+            <a href="about:config">about:config</a> then set
+            <code> media.webspeech.recognition.enable </code> and
+            <code>media.webspeech.recognition.force_enable</code>
+            to true, then refresh this page
+          </p>
+        </div>
+      </article>
+    </section>
+    <!--<script type="module" src="./src/main.js"></script>-->
+    <script src="./src/util/SR.js"></script>
   </body>
 </html>
