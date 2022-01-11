@@ -74,21 +74,27 @@ class WebSpeech {
   }
 }
 
-let sr = new WebSpeech(["hola", "esta", "es", "una", "nueva", "prueba"]);
+export default WebSpeech
+/*
+ * 
+
+let webSpeech = new WebSpeech(["hola", "esta", "es", "una", "nueva", "prueba"]);
 
 const recorder = document.querySelector("#recorder");
 const record = document.querySelector("#record");
 const test = document.querySelector("#test");
 
 recorder.onmousedown = () => {
-  sr.startHandler();
-  sr.resultHandler();
+  webSpeech.startHandler();
+  webSpeech.resultHandler();
 };
 
 recorder.onmouseup = () => {
   setTimeout(() => {
-    sr.endHandler();
-    sr.errorhHandler();
+    webSpeech.endHandler();
+    webSpeech.errorhHandler();
     test.value += sr.getResult;
   }, 800);
 };
+
+ * */
