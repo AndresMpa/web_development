@@ -1,6 +1,3 @@
-const SpeechRecognitionEvent =
-  globalThis.SpeechRecognitionEvent || globalThis.webkitSpeechRecognitionEvent;
-
 class WebSpeech {
   constructor(dictionary) {
     this.dictionary = dictionary;
@@ -75,26 +72,3 @@ class WebSpeech {
 }
 
 export default WebSpeech
-/*
- * 
-
-let webSpeech = new WebSpeech(["hola", "esta", "es", "una", "nueva", "prueba"]);
-
-const recorder = document.querySelector("#recorder");
-const record = document.querySelector("#record");
-const test = document.querySelector("#test");
-
-recorder.onmousedown = () => {
-  webSpeech.startHandler();
-  webSpeech.resultHandler();
-};
-
-recorder.onmouseup = () => {
-  setTimeout(() => {
-    webSpeech.endHandler();
-    webSpeech.errorhHandler();
-    test.value += sr.getResult;
-  }, 800);
-};
-
- * */

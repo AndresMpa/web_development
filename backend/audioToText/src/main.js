@@ -1,4 +1,5 @@
 import detectBrowser from "./browserHandler.js";
+import { commands, actions } from "./util/commands.js";
 
 const browser = detectBrowser();
 
@@ -11,6 +12,8 @@ recorderButton.onmousedown = () => {
 
 recorderButton.onmouseup = () => {
   setTimeout(() => {
-    test.value += browser.transcription;
+    let transcription = browser.transcription;
+    test.value += transcription;
+    commands(transcription, actions(transcription));
   }, 800);
 };
