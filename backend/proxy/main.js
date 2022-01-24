@@ -6,50 +6,62 @@ const loadInfo = () => {
   Object.keys(target).forEach((item) => {
     let optionLabel = document.createElement("p");
     optionLabel.classList.add("optionLabel");
-    optionLabel.innerHTML = `${item} `;
+    optionLabel.innerHTML = `"${item}" `;
     option.appendChild(optionLabel);
   });
 };
 
 const target = {
-  rojo: () => {
-    document.querySelector("html").style.backgroundColor = "red"
-    document.querySelector("body").style.backgroundColor = "red"
+  red: () => {
+    document.querySelector("html").style.backgroundColor = "red";
+    document.querySelector("body").style.backgroundColor = "red";
   },
-  verde: () => {
-    document.querySelector("html").style.backgroundColor = "green"
-    document.querySelector("body").style.backgroundColor = "green"
+  green: () => {
+    document.querySelector("html").style.backgroundColor = "green";
+    document.querySelector("body").style.backgroundColor = "green";
   },
-  azul: () => {
-    document.querySelector("html").style.backgroundColor = "blue"
-    document.querySelector("body").style.backgroundColor = "blue"
+  blue: () => {
+    document.querySelector("html").style.backgroundColor = "blue";
+    document.querySelector("body").style.backgroundColor = "blue";
   },
-  amarillo: () => {
-    document.querySelector("html").style.backgroundColor = "yellow"
-    document.querySelector("body").style.backgroundColor = "yellow"
+  yellow: () => {
+    document.querySelector("html").style.backgroundColor = "yellow";
+    document.querySelector("body").style.backgroundColor = "yellow";
   },
-  naranja: () => {
-    document.querySelector("html").style.backgroundColor = "orange"
-    document.querySelector("body").style.backgroundColor = "orange"
+  orange: () => {
+    document.querySelector("html").style.backgroundColor = "orange";
+    document.querySelector("body").style.backgroundColor = "orange";
   },
-  violeta: () => {
-    document.querySelector("html").style.backgroundColor = "violet"
-    document.querySelector("body").style.backgroundColor = "violet"
+  violet: () => {
+    document.querySelector("html").style.backgroundColor = "violet";
+    document.querySelector("body").style.backgroundColor = "violet";
   },
-  rosa: () => {
-    document.querySelector("html").style.backgroundColor = "pink"
-    document.querySelector("body").style.backgroundColor = "pink"
+  pink: () => {
+    document.querySelector("html").style.backgroundColor = "pink";
+    document.querySelector("body").style.backgroundColor = "pink";
   },
-  purpura: () => {
-    document.querySelector("html").style.backgroundColor = "purple"
-    document.querySelector("body").style.backgroundColor = "purple"
+  purple: () => {
+    document.querySelector("html").style.backgroundColor = "purple";
+    document.querySelector("body").style.backgroundColor = "purple";
   },
-  blanco: () => {
-    document.querySelector("html").style.backgroundColor = "white"
-    document.querySelector("body").style.backgroundColor = "white"
+  white: () => {
+    document.querySelector("html").style.backgroundColor = "white";
+    document.querySelector("body").style.backgroundColor = "white";
   },
-  recarga: () => {
+  clean: () => {
+    resultInput.style.display = "flex";
+    resultInput.classList = "";
+  },
+  reload: () => {
     window.location.reload();
+  },
+  "text jump": () => {
+    resultInput.classList =
+      "animate__animated animate__zoomIn animate__infinite";
+  },
+  "text bong": () => {
+    resultInput.classList =
+      "animate__animated animate__bounce animate__infinite";
   },
 };
 
@@ -65,21 +77,24 @@ const handler = {
 
     if (suggestion) {
       obj[suggestion]();
-      return suggestion
+      resultInput.value = suggestion;
     }
   },
 };
 
 const proxyGenerator = () => {
   return new Proxy(target, handler);
-}
+};
 
-const proxy = proxyGenerator()
+const proxy = proxyGenerator();
 
 loadInfo();
 
+textInput.addEventListener("click", () => {
+  resultInput.value = "";
+  textInput.value = "";
+});
+
 textInput.addEventListener("change", () => {
   proxy.value = textInput.value;
-  resultInput.value = proxy.value || "";
-  textInput.value = ""
 });
