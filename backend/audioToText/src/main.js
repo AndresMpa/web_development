@@ -1,7 +1,8 @@
+import { proxyGenerator } from "./util/proxyCommands.js";
 import detectBrowser from "./browserHandler.js";
-import { commands, actions } from "./util/commands.js";
 
 const browser = detectBrowser();
+const proxy = proxyGenerator();
 
 const recorderButton = document.querySelector("#recorder");
 const test = document.querySelector("#test");
@@ -14,6 +15,6 @@ recorderButton.onmouseup = () => {
   setTimeout(() => {
     let transcription = browser.transcription;
     test.value += transcription;
-    commands(transcription, actions(transcription));
+    proxy.value = transcription;
   }, 800);
 };
